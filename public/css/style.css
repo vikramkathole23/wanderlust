@@ -1,0 +1,91 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.body-container {
+  /* max-width: 1200px; */
+  margin: 0 ;
+  margin-top: 2rem;
+  /* margin-bottom: 3rem; */
+  overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+  /* background-color: #333; */
+  color: white;
+  padding: 10px;
+}
+.navbar .brand {
+  color: rgb(229, 13, 13);
+  text-decoration: none;
+  margin-right: 2rem;
+
+}
+.navbar .brand h1{
+  font-size: 2rem;
+}
+.icon {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.nav-item{
+  margin-right: 1rem;
+  color: white;
+  text-decoration: none;
+
+}
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-item a:hover {
+  color: rgb(229, 13, 13);
+  /* font-size: scale(1.1); */
+}
+
+.navbar-search button{
+   border-radius: 1rem;
+}
+
+.navbar-search input{
+   border-radius: 1rem;
+}
+
+#userDropdown{
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 0 10px;
+}
+
+#userDropdown p{
+  margin-top: 10px;
+}
+
+#userDropdown a{
+  margin-left: 10px;
+}
+
+.category-bar {
+  width:100%;
+  height: 50px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+/* new listing form */
+.button {
+  background-color: rgb(229, 13, 13);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  align-self: center;
+  cursor: pointer;
+}

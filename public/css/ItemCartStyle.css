@@ -1,0 +1,24 @@
+.card {
+    /* border: 2px solid #333; */
+  color: black;
+  border-radius: 10px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  width: 22rem;
+  
+}
+.card .card-img-top{
+    width: 100%;
+    height: 200px !important;
+    object-fit: cover;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.card:hover{
+  opacity: 0.8;
+}
+
+.listing-links{
+    text-decoration: none 
+}

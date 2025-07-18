@@ -1,0 +1,44 @@
+<% layout('layouts/boilerplate') %>
+<div class="main-body">
+<div class="signup-form-container ">
+  <h1 class=" ">Login </h1>
+  <p class="mb-3">Please enter your credentials to login.</p>
+  <div class="signup-form">
+  <form id="loginForm" action="/login" class="needs-validation" method="post" autocomplete="on" novalidate>
+    <div class="mb-2">
+      <label for="username">Username:</label>
+      <input
+        id="username"
+        name="username"
+        type="text"
+        placeholder="Enter your Username"
+        autocomplete="username"
+        required
+        autofocus
+      />
+    </div>
+    <div class="mb-2">
+      <label for="current-password">Password:</label>
+      <input
+        id="current-password"
+        name="password"
+        placeholder="Enter your Password"
+        type="password"
+        autocomplete="current-password"
+        required
+      />
+    </div>
+    <div class="">
+      <button type="submit" class="btn btn-outline-danger">Login</button>
+    </div>
+
+  </form>
+  </div>
+  <div class="mt-2">
+      <p>Forgot your password? <a href="/forgot-password">Reset it</a></p>
+    </div>
+    <div class="mt-1">
+      <p>Don't have an account? <a href="/signup">Register</a></p>  
+    </div>
+</div>
+</div>

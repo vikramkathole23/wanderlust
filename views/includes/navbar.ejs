@@ -1,0 +1,49 @@
+<nav  class="navbar navbar-expand-lg sticky-top  bg-body-tertiary bg-dark border-bottom ">
+  <div class="container-fluid">
+    <a class="brand" aria-current="page" href="/listings"><h1>Airbnb</h1></a>
+    <button class="navbar-toggler icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+         <i class="fa-solid fa-bars navbar-toggler-icon " style="color: #ffffff;"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/listings">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/listings/new">New Listing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-disabled="true">About us</a>
+        </li>
+      </ul>
+      <div class="navbar-search">
+        <form class="d-flex mr-4" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-danger" type="submit">Search</button>
+      </form>
+      </div>
+
+      <div class="dropdown ml-2 " id="userDropdown">
+
+        <% if(currUser){ %>
+          <p><%= currUser.email %></p>
+        <%  } %>
+        <a href="#" class="d-flex align-items-center text-light text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="user" width="32" height="32" class="rounded-circle">
+        </a>
+      
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="dropdownUser">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <% if(!currUser){ %>
+          <li><a class="dropdown-item" href="/login">Login</a></li>
+          <li><a class="dropdown-item" href="/signup">Sign up</a></li>
+          <% } %>
+          <% if(currUser){ %>
+          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</nav>
