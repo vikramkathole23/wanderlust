@@ -1,7 +1,9 @@
 .show-card{
     margin: 1rem !important;
     margin-left: 1rem !important;
-    width: 30rem !important;
+    max-width: 30rem !important;
+    min-width: 10rem !important;
+    height: 100% !important;
     /* height: auto !important; */
 }
 .show-card-body{
@@ -31,4 +33,12 @@
 }
 .card-body p{
     margin-bottom: 5px;
+}
+.container-fluid{
+    padding-right: 4rem !important;
+}
+@media (min-width: 768px) {
+  .show-card {
+    max-width: 600px; /* nice width for tablets/desktops */
+  }
 }
