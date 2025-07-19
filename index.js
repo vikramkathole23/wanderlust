@@ -1,7 +1,6 @@
 if (process.env.NODE_ENV != "production") {
   require('dotenv').config()
 }
-
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
@@ -19,7 +18,6 @@ const LocalStrategy =require('passport-local')
 const Usermodel=require('./model/user.models.js')
 const ExpressError = require('./utils/expressError');
 const cookieParser = require('cookie-parser');
-const { stdin } = require('process');
 const { error } = require('console');
 
 const DB_URL=process.env.MONGO_URL
@@ -87,10 +85,10 @@ app.use((req,res,next)=>{
    next()
 })
 
-// Routes
-app.get('/', (req, res) => {
-  res.send('Welcome to the Wanderlust API');
-})
+// // Routes
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Wanderlust API');
+// })
 
 // Listings routes
 app.use('/listings', listingRoutes);
@@ -114,7 +112,8 @@ app.use((err, req, res,next) => {
   next()
 });
 
-app.listen(3000, () => {
+const PORT= process.env.PORT||8000;
+app.listen(PORT, () => {
   console.log('Server is running on http://localhost:3000');
 });
 
