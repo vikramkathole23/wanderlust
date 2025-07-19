@@ -1,7 +1,6 @@
 <% layout('layouts/boilerplate') %>
-<body>
-  <body>
-       <h1>Edit Listing</h1>
+       <div class="container mb-4 ">
+        <h1 class=" mb-3 text-danger">Edit Listing</h1>
         <form class="row g-3 needs-validation" action="/listings/<%= listing._id %>?_method=PATCH" method="POST" novalidate enctype="multipart/form-data">
             <div class="col-md-12 ">
                 <label for="title" class="form-label">Title:</label>
@@ -57,7 +56,4 @@
                 <button type="submit" class="btn btn-primary">Update Listing</button>
             </div>
         </form>
-   
-</body>
-
-</html>
+        

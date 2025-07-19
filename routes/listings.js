@@ -44,11 +44,6 @@ router.route("/:id")
   ValidateListing,
   asyncWrap(ListingController.UpdateListing)
 )
-// // show route
-// router.get(
-//   "/:id",
-//   asyncWrap(ListingController.ShowSingleListing)
-// );
 
 // update route
 router.get(
@@ -57,12 +52,6 @@ router.get(
   isOwner,
   asyncWrap(ListingController.UpdateListingForm)
 );
-
-// router.patch(
-//   "/:id",
-//   ValidateListing,
-//   asyncWrap(ListingController.UpdateListing)
-// );
 
 // delete route
 router.delete(

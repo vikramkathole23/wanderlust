@@ -1,28 +1,24 @@
 
 <% layout('layouts/boilerplate') %>
 
-<body>
-    
-        <div class="listing-container">
-            <% for(let listing of listings) { %> 
-            <a href="/listings/<%=listing.id%> " class="listing-links">
-                <div class="listing-item">
-                    <div class="card " >
-                        <img src="<%= listing.image.url %>" class="card-img-top" style="height: 14rem ;" alt="<%= listing.title %>">
-                        <div class="card-body" >
-                            <h5 class="card-title">
-                                <%= listing.title.length > 8 ? listing.title.slice(0, 15) + '...' : listing.title %>
-                            </h5>
-                            <!-- <p class="card-text"><%= listing.description %></p> -->
-                            <p><span>₹</span> <%= listing.price.toLocaleString("en-IN") %> /night</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <% } %>
+<div class="listing-container">
+  <% for(let listing of listings) { %> 
+    <a href="/listings/<%=listing.id%>" class="listing-links">
+      <div class="listing-item">
+        <div class="card">
+          <img src="<%= listing.image.url %>" class="card-img-top" alt="<%= listing.title %>" style="height: 14rem;">
+          <div class="card-body">
+            <h3>owner: <%= listing.owner.username %></h3>
+            <p class="card-title">
+              <%= listing.title.length > 30 ? listing.title.slice(0, 25) + '...' : listing.title %>
+            </p>
+            <p>₹ <%= listing.price.toLocaleString("en-IN") %> /night</p>
+          </div>
         </div>
+      </div>
+    </a>
+  <% } %>
+</div>
 
 
-
-</body>
 

@@ -2,7 +2,8 @@ const ExpressError = require("../utils/expressError");
 const Listing = require("../model/listing");
 
 module.exports.ShowListings = async (req, res) => {
-  const listings = await Listing.find();
+  const listings = await Listing.find()
+  .populate("owner");
   res.render("listings/index", { listings });
 };
 

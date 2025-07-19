@@ -1,18 +1,21 @@
-body {
-  background-color: #f0f0f0;
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* stops horizontal scroll */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 .body-container {
-  /* max-width: 1200px; */
   margin: 0 ;
-  margin-top: 2rem;
-  /* margin-bottom: 3rem; */
+  padding-top: 2rem;
   overflow-x: hidden;
+  /* height: 100vh; */
 }
 
 /* navbar */
 .navbar {
-  /* background-color: #333; */
   color: white;
   padding: 10px;
 }
@@ -78,6 +81,20 @@ body {
   margin-bottom: 20px;
 }
 
+.navbar-toggler {
+  /* background-color: rgb(255, 255, 255); */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+.navbar-toggler-icon {
+  font-size: 1.5rem !important;
+  text-align: center;
+  color: white;
+}
 /* new listing form */
 .button {
   background-color: rgb(229, 13, 13);
