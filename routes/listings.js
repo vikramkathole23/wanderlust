@@ -23,10 +23,6 @@ router.route("/")
   ValidateListing,
   asyncWrap(ListingController.CreateListings)
 )
-// .post(upload.single('image'),(req,res)=>{
-//    res.send(req.file)
-// ValidateListing,
-// })
 
 
 // create route

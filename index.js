@@ -85,10 +85,10 @@ app.use((req,res,next)=>{
    next()
 })
 
-// // Routes
-// app.get('/', (req, res) => {
-//   res.send('Welcome to the Wanderlust API');
-// })
+//  Routes
+app.get('/', (req, res) => {
+  res.redirect("/listings")
+})
 
 // Listings routes
 app.use('/listings', listingRoutes);
