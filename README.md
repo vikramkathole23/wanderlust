@@ -1,18 +1,42 @@
-Wanderlust is a full-stack travel listing web app where users can explore destinations, create listings, and manage their travel spots all in one place.
-It’s built to mimic real-world booking platforms—complete with secure authentication, CRUD operations, image uploads via Cloudinary, and a MongoDB database for storage.
+# Wanderlust 🌍✨
 
-The app is designed with EJS templates for dynamic pages, clean styling with CSS, and a Node.js + Express.js backend for handling all the server-side magic.
+**Wanderlust** is a full-stack travel listing web app where users can explore, create, and manage stays with secure authentication, image uploads, and a smooth, responsive UI.
 
-Whether you’re a traveler wanting to browse stays or a host looking to share your own property, Wanderlust makes the process smooth, intuitive, and visually appealing.
+## 📜 Overview
+Wanderlust is designed to mimic real-world booking platforms, allowing travelers to browse listings and hosts to add their own. It features **CRUD operations**, **Cloudinary image storage**, and an **MVC architecture** for clean, maintainable code.
 
-Core highlights:
+## 🚀 Features
+- 🔐 User Authentication (Sign up, Login, Logout)
+- 🏠 Create, Edit, and Delete Listings
+- 📸 Upload and Display Listing Images via Cloudinary
+- 💾 MongoDB + Mongoose Database
+- 🎨 EJS templates + CSS for a clean UI
+- ⚙️ Middleware for validation and error handling
 
-🔐 Secure login & registration
+## 🛠 Tech Stack
+- **Backend:** Node.js, Express.js
+- **Frontend:** EJS, CSS
+- **Database:** MongoDB (Mongoose)
+- **Media Handling:** Cloudinary
+- **Auth & Security:** Passport.js, bcrypt
 
-🏠 Add, edit, and delete your listings
+## 📦 Installation & Setup
+```bash
+# Clone the repository
+git clone https://github.com/vikramkathole23/wanderlust.git
 
-📸 Upload and display listing images
+# Move into project folder
+cd wanderlust
 
-📂 MongoDB integration for data storage
+# Install dependencies
+npm install
 
-⚡ Fast & responsive UI
+# Create a .env file in root and add:
+# CLOUDINARY_CLOUD_NAME=your_name
+# CLOUDINARY_API_KEY=your_key
+# CLOUDINARY_API_SECRET=your_secret
+# MONGODB_URI=your_mongo_uri
+# SESSION_SECRET=your_secret_key
+
+# Run the app
+npm start
