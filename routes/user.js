@@ -11,6 +11,11 @@ router
   .post(asyncWrap(UserController.RegisterUser));
 
 router
+  .route("/verify")
+  .get(UserController.EmailVerificationPage)
+  .post(UserController.varifyEmail)
+
+router
   .route("/login")
   .get(UserController.UserLoginForm)
   .post(

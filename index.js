@@ -18,7 +18,8 @@ const LocalStrategy =require('passport-local')
 const Usermodel=require('./model/user.models.js')
 const ExpressError = require('./utils/expressError');
 const cookieParser = require('cookie-parser');
-const { error } = require('console');
+const { error, log } = require('console');
+
 
 const DB_URL=process.env.MONGO_URL
 const secret=process.env.SECRETE
@@ -44,7 +45,7 @@ app.engine('ejs', ejsMate);
 app.use(cookieParser());
 
 const store= MongoStore.create({
-   mongoUrl:process.env.MONGO_URL,
+  mongoUrl:process.env.MONGO_URL,
   crypto: {
     secret: secret
   },
@@ -108,6 +109,8 @@ app.use((req, res, next) => {
 app.use((err, req, res,next) => {
   const { statusCode = 500, message = 'Something went wrong' } = err;
   res.render("error.ejs",{message});
+  console.log(err);
+  
   // res.status(statusCode).render('error', { message });
   next()
 });

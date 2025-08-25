@@ -15,6 +15,8 @@ const UserSchema= new Schema({
     required: true,
     unique: true
   },
+  isVerified: { type: Boolean, default: false },
+  verificationCode: String,
     // phonenumber:{
     //     type:number,
     //     required:true,

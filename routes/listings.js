@@ -14,6 +14,11 @@ const upload = multer({ storage})
 
 router.use(methodeOverride("_method"));
 
+// create route
+router.get("/new", isLoggedIn, (req, res) => {
+  res.render("listings/new.ejs"); // Pass the price to the form
+});
+
 router.route("/")
 .get( asyncWrap(ListingController.ShowListings) )
 .post(
@@ -23,12 +28,6 @@ router.route("/")
   ValidateListing,
   asyncWrap(ListingController.CreateListings)
 )
-
-
-// create route
-router.get("/new", isLoggedIn, (req, res) => {
-  res.render("listings/new.ejs"); // Pass the price to the form
-});
 
 router.route("/:id")
 .get(
